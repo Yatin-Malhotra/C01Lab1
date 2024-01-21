@@ -20,15 +20,13 @@ const ToDoList = ({ initialValues }) => {
 	return (
 		<View style={styles.container}>
 			{toDos.map((toDo) => (
-				<View key={toDo.id}>
-					<Text style={styles.text}>{toDo.title}</Text>
-					<View style={styles.buttonContainer}>
+				<View key={toDo.id} style={styles.todoItem}>
+					<Text>{toDo.title}</Text>
 						<Button
 							title="Remove Task"
 							onPress={() => removeToDo(toDo.id)}
 						/>
 					</View>
-				</View>
 			))}
 			<AddTask onAddTask={addToDo} />
 		</View>
