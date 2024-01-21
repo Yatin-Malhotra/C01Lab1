@@ -22,11 +22,11 @@ const ToDoList = ({ initialValues }) => {
 			{toDos.map((toDo) => (
 				<View key={toDo.id} style={styles.todoItem}>
 					<Text>{toDo.title}</Text>
-						<Button
-							title="Remove Task"
-							onPress={() => removeToDo(toDo.id)}
-						/>
-					</View>
+					<Button
+						title="Remove Task"
+						onPress={() => removeToDo(toDo.id)}
+					/>
+				</View>
 			))}
 			<AddTask onAddTask={addToDo} />
 		</View>
